@@ -1,0 +1,110 @@
+body {
+    background-color: aquamarine;
+    font-family: freeman, sans-serif;
+}
+.logo {
+    width: 80px;
+}
+
+.contenedorAlign {
+    text-align: center;
+    color: #007f7f
+}
+
+.imageContainer {
+    
+    border-radius: 10px;
+    border: 4px solid #007f7f;
+   
+}
+
+.divContainer {
+     display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.slider {
+  /* width: 80%; Ancho del slider */
+  overflow: hidden; /* Oculta las partes de las imágenes que están fuera del slider */
+  position: relative; /* Necesario para el posicionamiento absoluto de las diapositivas */
+}
+
+.slide {
+  display: inline-block;
+  width: 80%; 
+}
+
+.slide img {
+  width: 100%; /* Ajusta el ancho de la imagen al ancho del slider */
+}
+
+
+.property-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail img {
+  width: 50px;
+  height: 50px;
+}
+
+.detail span {
+  display: block;
+  margin-top: 5px;
+}
+
+
+
+/* card content */
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 1 calc(30% - 20px); /* Definimos el ancho inicial de las tarjetas */
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Incluimos el padding y border en el ancho total */
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 20px); /* Cambiamos el ancho a 2 columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-basis: calc(100% - 20px); /* Cambiamos el ancho a 1 columna en pantallas aún más pequeñas */
+  }
+}
